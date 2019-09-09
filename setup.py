@@ -6,14 +6,15 @@ import platform
 from setuptools import setup
 
 VERSION = '1.0.0'
-TERRAFORM_VERSION = '0.12.6'
 
 with open('README.md') as f:
     readme = f.read()
 
 executable_stat = os.stat('lib/skopeo_linux')
-print(executable_stat)
 os.chmod('lib/skopeo_linux', executable_stat.st_mode | stat.S_IEXEC)
+
+executable_stat = os.stat('lib/skopeo_darwin')
+os.chmod('lib/skopeo_darwin', executable_stat.st_mode | stat.S_IEXEC)
 
 try:
     from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
@@ -35,7 +36,7 @@ setup(
     license='Apache License Version 2.0',
     py_modules=['skopeo'],
     data_files=[
-        ('lib', ['lib/skopeo_linux']),
+        ('lib', ['lib/skopeo_linux', 'lib/skopeo_darwin']),
     ],
     entry_points={
         'console_scripts': [
