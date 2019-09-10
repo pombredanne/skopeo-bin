@@ -19,7 +19,7 @@ build-wheel.sh
 
 ## Updating Skopeo binaries
 
-For building the MacOS binary follow the instructions [here](https://github.com/containers/skopeo#building-without-a-container) and for Linux follow the pure-GO static binary instructions [here](https://github.com/containers/skopeo#building-documentation).
+For building the MacOS binary follow the instructions [here](https://github.com/containers/skopeo#building-without-a-container) and for Linux follow the pure-GO static binary instructions [here](https://github.com/containers/skopeo#building-in-a-container).
 
 ## License
 
