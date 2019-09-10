@@ -12,6 +12,7 @@ skopeo --version
 
 ## Build wheel
 
+Works only on Mac/Linux for distributing since we need to set the execution rights of the binaries properly. Windows doesnt allow this.
 
 ```sh
 build-wheel.sh
