@@ -5,7 +5,7 @@ This is a Python wrapper for [Skopeo](https://github.com/containers/skopeo). Usi
 ## Usage
 
 ```sh
-pipenv install --dev skopeo-bin
+pipenv install skopeo-bin
 
 skopeo --version
 ```
