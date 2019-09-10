@@ -17,4 +17,4 @@ SKOPEO_EXECUTABLE = (
 def main():
     print(SKOPEO_EXECUTABLE)
     args = [] if len(sys.argv) < 2 else sys.argv[1:]
-    os.execv(SKOPEO_EXECUTABLE, ['skopeo'] + args)
+    os.execv(SKOPEO_EXECUTABLE, ['skopeo', '--insecure-policy'] + args)
